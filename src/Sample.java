@@ -20,7 +20,7 @@ public class Sample {
             }catch(Exception e){ System.out.println(e);}
 
     }
-}*/
+}
 //Statement interface
 //to insert value in database table.
 import java.sql.*;
@@ -33,4 +33,17 @@ public class Sample{
         System.out.println(i+"record inserted");
        con.close();
     }
+}*/
+//delete value from database table
+import java.sql.*;
+public class Sample{
+    public static void main(String[] args)throws Exception {
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/anshika","root","");
+        Statement stmt=con.createStatement();
+        int i=stmt.executeUpdate("delete from test1 where b1=10");
+        System.out.println(i+ " record deleted");
+        con.close();
+    }
 }
+
