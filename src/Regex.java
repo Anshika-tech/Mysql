@@ -27,7 +27,7 @@ public class Regex{
         System.out.println(Pattern.matches(".s","amms"));//false (has more than 2 char)
         System.out.println(Pattern.matches("..s","mas"));//true (3rd char is s)
     }
-}*/
+}
 //Regular Expression Character classes Example
 public class Regex{
     public static void main(String[] args) {
@@ -35,4 +35,37 @@ public class Regex{
         System.out.println(Pattern.matches("[amn]","a"));//true (among a or m or n)
         System.out.println(Pattern.matches("[amn]","ammna"));//false (m and a comes more than once)
     }
+}*/
+//Regex quantifiers.
+//The quantifiers specify the number of occurrences of a character.
+ /*
+ X?	    X occurs once or not at all
+ X+	    X occurs once or more times
+ X*	    X occurs zero or more times
+ X{n}	X occurs n times only
+ X{n,}	X occurs n or more times
+ X{y,z} X occurs at least y times but less than z times  */
+public class Regex{
+    public static void main(String[] args) {
+        System.out.println("? quantifier ....");
+        System.out.println(Pattern.matches("[amn]?","a"));//true (a or m or n comes one time)
+        System.out.println(Pattern.matches("[amn]?","aazzttmm"));//false (a comes more than one time)
+        System.out.println(Pattern.matches("[amn]?","azztt"));//false (z and t are not matching pattern)
+        System.out.println(Pattern.matches("[amn]?","am"));//false (a or m or n comes one time)
+        System.out.println(Pattern.matches("[amn]?","m"));//true (a or m or n comes one time)
+        System.out.println(Pattern.matches("[amn]?","an"));//false (a or m or n comes one time)
+        System.out.println(Pattern.matches("[amn]?","amn"));//false (a or m or n comes one time)
+        System.out.println(Pattern.matches("[amn]?","amzzt"));//false (a or m or n comes one time)
+
+        System.out.println("+ quantifier ....");
+        System.out.println(Pattern.matches("[amn]+", "a"));//true (a or m or n once or more times)
+        System.out.println(Pattern.matches("[amn]+", "aaa"));//true (a comes more than one time)
+        System.out.println(Pattern.matches("[amn]+", "aammmnn"));//true (a or m or n comes more than once)
+        System.out.println(Pattern.matches("[amn]+", "aazzta"));//false (z and t are not matching pattern)
+        System.out.println(Pattern.matches("[amn]+","am"));//true
+
+        System.out.println("* quantifier ....");
+        System.out.println(Pattern.matches("[amn]*", "ammmna"));//true (a or m or n may come zero or more times)
+    }
 }
+
