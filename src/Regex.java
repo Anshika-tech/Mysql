@@ -67,7 +67,7 @@ public class Regex{
         System.out.println("* quantifier ....");
         System.out.println(Pattern.matches("[amn]*", "ammmna"));//true (a or m or n may come zero or more times)
     }
-}*/
+}
 //Regex Metacharacters
 //  The regular expression metacharacters work as shortcodes.
 public class Regex{
@@ -90,6 +90,16 @@ public class Regex{
         System.out.println("metacharacters D with quantifier....");
         System.out.println(Pattern.matches("\\D*", "mak"));//true (non-digit and may come 0 or more times)
 
+    }
+}*/
+/*Create a regular expression that accepts alphanumeric characters only.
+Its length must be six characters long only.*/
+public class Regex{
+    public static void main(String[] args) {
+        System.out.println(Pattern.matches("[a-zA-Z0-9]{6}","Ansh54"));//true
+        System.out.println(Pattern.matches("[a-zA-Z0-9]{6}","Anshika92"));//false (more than 6 char)
+        System.out.println(Pattern.matches("[a-zA-Z0-9]{6}","Ansi$2"));//false ($ is not matched)
+        System.out.println(Pattern.matches("[a-zA-Z0-9]{6}","9876AH"));//true
     }
 }
 
