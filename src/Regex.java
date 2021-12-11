@@ -91,9 +91,9 @@ public class Regex{
         System.out.println(Pattern.matches("\\D*", "mak"));//true (non-digit and may come 0 or more times)
 
     }
-}*/
-/*Create a regular expression that accepts alphanumeric characters only.
-Its length must be six characters long only.*/
+}
+//Create a regular expression that accepts alphanumeric characters only.
+//Its length must be six characters long only.
 public class Regex{
     public static void main(String[] args) {
         System.out.println(Pattern.matches("[a-zA-Z0-9]{6}","Ansh54"));//true
@@ -101,7 +101,23 @@ public class Regex{
         System.out.println(Pattern.matches("[a-zA-Z0-9]{6}","Ansi$2"));//false ($ is not matched)
         System.out.println(Pattern.matches("[a-zA-Z0-9]{6}","9876AH"));//true
     }
+}*/
+//Create a regular expression that accepts 10 digit numeric characters
+ //starting with 7, 8 or 9 only.
+public class Regex{
+    public static void main(String[] args) {
+        System.out.println("character class and quantifier");
+        System.out.println(Pattern.matches("[789][0-9]{9}","9876543210"));//true
+        System.out.println(Pattern.matches("[789][0-9]{9}","98765432101"));//false (11 characters)
+        System.out.println(Pattern.matches("[789][0-9]{9}","6876543210"));//false (starts from 6)
+        System.out.println(Pattern.matches("[789][0-9]{9}","8876543210"));//true
+        System.out.println("by metacharacters ...");
+        System.out.println(Pattern.matches("[789]{1}\\d{9}","8876543210"));//true
+        System.out.println(Pattern.matches("[789]{1}\\d{9}","88765432107"));//false (11 characters)
+    }
 }
+
+
 
 
 
