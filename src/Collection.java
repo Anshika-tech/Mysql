@@ -4,7 +4,7 @@
         , HashSet, LinkedHashSet, TreeSet).
 List interface
 List interface is implemented by the classes ArrayList, LinkedList, Vector, and Stack.
- */
+
 //Array list.
 import java.util.*;
 public class Collection {
@@ -17,5 +17,21 @@ public class Collection {
         while (itr.hasNext()) {
             System.out.println(itr.next());
         }
+    }
+}*/
+//LinkedList
+//LinkedList implements the Collection interface. It uses a doubly linked list internally to store the elements.
+// It can store the duplicate elements.
+import java.util.*;
+public class Collection{
+    public static void main(String[] args) {
+        LinkedList<String> l1=new LinkedList<String>();
+        l1.add("Ravi");
+        l1.add("anshika");
+        l1.add("Ravi");
+        l1.add("akansha");
+        Iterator<String> itr=l1.iterator();
+        while(itr.hasNext())
+            System.out.println(itr.next());
     }
 }
