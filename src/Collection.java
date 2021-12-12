@@ -1,0 +1,21 @@
+/*Java Collection means a single unit of objects. Java Collection framework provides many interfaces (Set, List, Queue, Deque) and classes (ArrayList
+        , Vector, LinkedList
+        , PriorityQueue
+        , HashSet, LinkedHashSet, TreeSet).
+List interface
+List interface is implemented by the classes ArrayList, LinkedList, Vector, and Stack.
+ */
+//Array list.
+import java.util.*;
+public class Collection {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("Ravi");
+        list.add("Anshika");
+        list.add("Ajay");
+        Iterator itr = list.iterator();
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+    }
+}
