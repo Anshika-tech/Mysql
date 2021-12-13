@@ -68,7 +68,7 @@ public class Collection{
     }
 }*/
 //set interface
-//Hash set- It contains unique items.
+//Hash set- It contains unique items
 import java.util.*;
 public class Collection{
     public static void main(String[] args) {
