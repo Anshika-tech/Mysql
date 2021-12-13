@@ -101,7 +101,7 @@ public class Regex{
         System.out.println(Pattern.matches("[a-zA-Z0-9]{6}","Ansi$2"));//false ($ is not matched)
         System.out.println(Pattern.matches("[a-zA-Z0-9]{6}","9876AH"));//true
     }
-}*/
+}
 //Create a regular expression that accepts 10 digit numeric characters
  //starting with 7, 8 or 9 only.
 public class Regex{
@@ -115,7 +115,8 @@ public class Regex{
         System.out.println(Pattern.matches("[789]{1}\\d{9}","8876543210"));//true
         System.out.println(Pattern.matches("[789]{1}\\d{9}","88765432107"));//false (11 characters)
     }
-}
+}*/
+
 
 
 

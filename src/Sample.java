@@ -45,7 +45,7 @@ public class Sample{
         System.out.println(i+ " record deleted");
         con.close();
     }
-}*/
+}
 //PreparedStatement interface
 //The PreparedStatement interface is a subinterface of Statement. It is used to execute parameterized query.
 import java.sql.*;
@@ -63,5 +63,5 @@ public class Sample{
         System.out.println(i+ " records inserted");
         con.close();
     }
-}
+}*/
 

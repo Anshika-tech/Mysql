@@ -51,7 +51,7 @@ public class Collection{
 
 
     }
-}*/
+}
 //stack
 import java.util.*;
 public class Collection{
@@ -62,6 +62,22 @@ public class Collection{
         s1.push("Hritik");
         s1.push("Priyanshi");
         s1.push("akansha");
+        Iterator<String>itr=s1.iterator();
+        while(itr.hasNext())
+            System.out.println(itr.next());
+    }
+}*/
+//set interface
+//Hash set- It contains unique items.
+import java.util.*;
+public class Collection{
+    public static void main(String[] args) {
+        HashSet<String> s1=new HashSet<String>();
+        s1.add("anshika");
+        s1.add("amit");
+        s1.add("Hritik");
+        s1.add("Priyanshi");
+        s1.add("anshika");
         Iterator<String>itr=s1.iterator();
         while(itr.hasNext())
             System.out.println(itr.next());
