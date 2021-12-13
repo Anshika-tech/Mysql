@@ -15,7 +15,7 @@ public class Generics {
             System.out.println(itr.next());
 
     }
-}*/
+}
 //Generic class
 import java.util.*;
 class MyGen<T>{
@@ -34,5 +34,22 @@ public class Generics{
         System.out.println("Enter number");
         m.add(sc.nextInt());
         System.out.println(m.get());
+    }
+}*/
+//Generic method
+public class Generics{
+    public static <E> void printArray(E[] elements){
+        for(E element :elements){
+            System.out.println(element);
+        }
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        Integer[] a1={10,20,30,40,50};
+        Character[] ch={'j','a','v','a'};
+        System.out.println("Printing Integer Array");
+        printArray(a1);
+        System.out.println("Printing Character Array");
+        printArray(ch);
     }
 }
