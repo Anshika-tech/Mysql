@@ -115,8 +115,24 @@ public class Regex{
         System.out.println(Pattern.matches("[789]{1}\\d{9}","8876543210"));//true
         System.out.println(Pattern.matches("[789]{1}\\d{9}","88765432107"));//false (11 characters)
     }
-}*/
-
+}
+*/
+//Q.program to check  valid email  address
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+public class Regex{
+    public static void main(String[] args) {
+        String target="neeraj@rediff.com";
+        Pattern p=Pattern.compile("[a-zA-Z0-9_.]+[@](gmail|yahoo|rediff)[.]com");
+        Matcher m=p.matcher(target);
+        int c=0;
+        while(m.find()){
+            System.out.println(m.start()+" " +m.end()+" "+m.group());
+            c++;
+        }
+        System.out.println(c);
+    }
+}
 
 
 
