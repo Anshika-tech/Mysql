@@ -35,7 +35,7 @@ public class Generics{
         m.add(sc.nextInt());
         System.out.println(m.get());
     }
-}*/
+}
 //Generic method
 public class Generics{
     public static <E> void printArray(E[] elements){
@@ -51,5 +51,35 @@ public class Generics{
         printArray(a1);
         System.out.println("Printing Character Array");
         printArray(ch);
+    }
+}*/
+//Wildcard in java Generics
+import java.util.*;
+abstract class Shape{
+    abstract void draw();
+}
+class Rectangle extends Shape{
+    void draw(){
+        System.out.println("drawing Rectangle");
+    }
+}
+class Circle extends Shape{
+    void draw(){
+        System.out.println("drawing circle");
+    }
+}
+public class Generics{
+    public static void drawShapes(List<? extends Shape>l1){
+        for(Shape s:l1){
+            s.draw();
+        }
+    }
+    public static void main(String[] args) {
+      List<Rectangle>l2=new ArrayList<Rectangle>();
+      l2.add(new Rectangle());
+      List<Circle>l3=new ArrayList<Circle>();
+      l3.add(new Circle());
+      drawShapes(l2);
+      drawShapes(l3);
     }
 }
